@@ -54,28 +54,25 @@
         <!-- Top Bar Start -->
         <div class="topbar">
             <nav class="navbar-custom">
-                <div class="list-unstyled float-right topbar-right-menu  mb-0">
-                    <li style="padding-right: 5%"><i class="mdi mdi-airplay"></i> Giờ máy chủ: {{\App\Traits\VisitorTriat::time_now()->format('H m s')}} </li>
-                    <li><i class="mdi mdi-alarm"></i> Giờ Nhật Bản:{{\App\Traits\VisitorTriat::time_now2()->format('H m s')}} </li>
-                </div>
+                <ul class="list-unstyled float-right mb-0 card-box">
+                    <li><i class="mdi mdi-airplay"></i> Giờ máy chủ: {{\App\Traits\VisitorTriat::time_now()->format('H m s')}}</li>
+                    <li><i class="mdi mdi-alarm"></i> Giờ Nhật Bản:{{\App\Traits\VisitorTriat::time_now2()->format('H m s')}}</li>
+                </ul>
                 <ul class="list-inline menu-left mb-0">
                     <li class="float-left">
-                        <button class="button-menu-mobile open-left disable-btn">
+                        <button class="button-menu-mobile open-left disable-btn" style="padding-top: 15px;">
                             <i class="dripicons-menu"></i>
                         </button>
                     </li>
                     <li>
                         <div class="page-title-box">
-                            <h4 class="page-title">Tạo link rút gọn </h4>
+                            <h4 class="page-title">Trang chủ </h4>
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-                                <li class="breadcrumb-item active">Rút gọn link</li>
+                                <li class="breadcrumb-item active">Welcome to Hoàng Hải JP admin panel !</li>
                             </ol>
                         </div>
                     </li>
-
                 </ul>
-
             </nav>
 
         </div>

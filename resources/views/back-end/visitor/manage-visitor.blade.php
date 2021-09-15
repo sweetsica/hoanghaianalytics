@@ -47,6 +47,18 @@
         });
     </script>
 
+    <!-- jQuery  -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/metisMenu.min.js')}}"></script>
+    <script src="{{asset('assets/js/waves.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
+    <!-- Dashboard Init -->
+    <script src="{{asset('assets/pages/jquery.dashboard.init.js')}}"></script>
+    <!-- App js -->
+    <script src="{{asset('assets/js/jquery.core.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.app.js')}}"></script>
+
 @endsection
 @section('content-page')
 <div class="content-page">

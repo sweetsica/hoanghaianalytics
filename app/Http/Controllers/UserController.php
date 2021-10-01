@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\LinkManage;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
@@ -16,27 +18,28 @@ class UserController extends Controller
     }
     public function checkLogin(Request $request)
     {
-
-        $info_user = User::where('email', $request->email)->first();
-        if ($info_user) {
-            if (Hash::check($request->password, $info_user->password)) {
-                $nameuser = $request->email;
-                $user_info = User::where('email', $nameuser)->first();
-                Session::flash('success', 'Đăng nhập thành công!');
-                Session::put('user_id', $user_info->id);
-                $link_datas = LinkManage::with('ShortLink')->latest()->get();
-                return view('back-end/link/manage-link', compact('user_info','link_datas'));
+        try{
+            $info_user = User::where('email', $request->email)->first();
+            if ($info_user) {
+                if (Hash::check($request->password, $info_user->password)) {
+                    $nameuser = $request->email;
+                    $user_info = User::where('email', $nameuser)->first();
+                    Session::flash('success', 'Đăng nhập thành công!');
+                    Session::put('user_id', $user_info->id);
+                    Auth::loginUsingId($user_info->id);
+                    $link_datas = LinkManage::with('ShortLink')->latest()->get();
+                    return view('back-end/link/manage-link', compact('user_info','link_datas'));
+                } else {
+                    Session::flash('error', 'Đăng nhập thất bại MK!');
+                    return view('back-end/login');
+                }
             } else {
-                Session::flash('error', 'Đăng nhập thất bại MK!');
-                echo "Sai mật khẩu";
-                die;
+                Session::flash('error', 'Đăng nhập thất bại TK!');
                 return view('back-end/login');
             }
-        } else {
-            Session::flash('error', 'Đăng nhập thất bại TK!');
-            echo "Sai tài khoản";
-            die;
-            return view('back-end/login');
+        }catch (\Exception $error){
+            Log::error($error);
+            return redirect()->route('user.login.get');
         }
     }
 
@@ -53,6 +56,13 @@ class UserController extends Controller
         User::create($userdata);
         return view('back-end/login');
     }
+
+    public function userSessionClear()
+    {
+        Session::flush();
+        return redirect()->route('user.login.get');
+    }
+
     /**
      * Display a listing of the resource.
      *

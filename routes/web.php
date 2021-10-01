@@ -18,12 +18,12 @@ use App\Http\Controllers\VisitorController;
 //     return view('welcome');
 // });
 
-Route::get('/','App\Http\Controllers\UserController@getLogin');
+Route::get('/','App\Http\Controllers\UserController@getLogin')->name('user.login.get');
 
-Route::get('/dashboard','App\Http\Controllers\VisitorController@dashboard')->name('dashboard');
-
-Route::get('/generate-shorten-link', [ShortLinkController::class,'index'])->name('shortlink');
-Route::post('/generate-shorten-link', [ShortLinkController::class,'store'])->name('generate-shorten-link.post');
+Route::get('/dashboard','App\Http\Controllers\VisitorController@dashboard')->name('dashboard')->middleware('auth');
+Route::get('/clear','App\Http\Controllers\VisitorController@userSessionClear')->name('clear.session');
+Route::get('/generate-shorten-link', [ShortLinkController::class,'index'])->name('shortlink')->middleware('auth');
+Route::post('/generate-shorten-link', [ShortLinkController::class,'store'])->name('generate-shorten-link.post')->middleware('auth');
 
 //create account with email and username
 //Route::get('/register','App\Http\Controllers\UserController@getRegister');
@@ -34,7 +34,10 @@ Route::get('/login','App\Http\Controllers\UserController@getLogin');
 Route::post('/login','App\Http\Controllers\UserController@checkLogin')->name('user.login');
 
 //visitor
-Route::get('/visitor-manage','App\Http\Controllers\VisitorController@index')->name('visitor.manage');
+Route::get('/visitor-manage','App\Http\Controllers\VisitorController@index')->name('visitor.manage')->middleware('auth');
+
+Route::get('/khaosat','App\Http\Controllers\SurveyController@create')->name('khaosat')->middleware('auth');
+Route::post('/khaosat','App\Http\Controllers\SurveyController@store')->name('khaosat.save');
 
 //Route Shortlink
 Route::get('short-link/{id}',[ShortLinkController::class,'delete'])->name('shortlink.delete');

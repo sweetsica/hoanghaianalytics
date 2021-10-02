@@ -100,17 +100,22 @@
                         <!--<li class="menu-title">Navigation</li>-->
                         <li class="{{request()->is('dashboard') ? 'mm-active' :''}}"}}>
                             <a href="{{route('dashboard')}}" {{request()->is('dashboard') ? 'mm-active' :''}}">
-                                <i class="fi-layers"></i><span class="badge badge-danger badge-pill float-right">1</span> <span> Dashboard </span>
+                                <i class="fi-layers"></i><span class="badge badge-danger badge-pill float-right">1</span> <span> Bảng tin </span>
                             </a>
                         </li>
                         <li class="{{request()->is('generate-shorten-link') ? 'mm-active' :''}}"}}>
                             <a href="{{route('shortlink')}}" class="{{request()->is('generate-shorten-link') ? 'mm-active' :''}}">
-                                <i class="fi-layers"></i><span class="badge badge-danger badge-pill float-right">2</span> <span> Short Link </span>
+                                <i class="fi-layers"></i><span class="badge badge-danger badge-pill float-right">2</span> <span> Rút Gọn Link </span>
+                            </a>
+                        </li>
+                        <li class="{{request()->is('khaosat.list') ? 'mm-active' :''}}"}}>
+                            <a href="{{route('khaosat.list')}}" class="{{request()->is('khaosat.list') ? 'mm-active' :''}}">
+                                <i class="fi-mail"></i><span class="badge badge-danger badge-pill float-right">3</span> <span> Khảo Sát </span>
                             </a>
                         </li>
                         <li class="{{request()->is('visitor-manage') ? 'mm-active' :''}}"}}>
                             <a href="{{route('visitor.manage')}}" class="{{request()->is('visitor-manage') ? 'mm-active' :''}}">
-                                <i class="fi-bar-graph-2"></i><span class="badge badge-danger badge-pill float-right">3</span> <span> Visitor </span>
+                                <i class="fi-bar-graph-2"></i><span class="badge badge-danger badge-pill float-right">4</span> <span> Người truy cập  </span>
                             </a>
                         </li>
                     </ul>

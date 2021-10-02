@@ -36,8 +36,10 @@ Route::post('/login','App\Http\Controllers\UserController@checkLogin')->name('us
 //visitor
 Route::get('/visitor-manage','App\Http\Controllers\VisitorController@index')->name('visitor.manage')->middleware('auth');
 
-Route::get('/khaosat','App\Http\Controllers\SurveyController@create')->name('khaosat')->middleware('auth');
+//Survey
+Route::get('/khaosat','App\Http\Controllers\SurveyController@create')->name('khaosat');
 Route::post('/khaosat','App\Http\Controllers\SurveyController@store')->name('khaosat.save');
+Route::get('/khaosat-list','App\Http\Controllers\SurveyController@list')->name('khaosat.list')->middleware('auth');;
 
 //Route Shortlink
 Route::get('short-link/{id}',[ShortLinkController::class,'delete'])->name('shortlink.delete');

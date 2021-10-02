@@ -12,9 +12,10 @@ class SurveyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function list()
     {
-        //
+        $data = Survey::latest()->take(50)->get();
+        return view('back-end/survey/manage-survey',compact('data'));
     }
 
     /**

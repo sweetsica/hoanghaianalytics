@@ -6,12 +6,8 @@
     <meta name="description" content="Khảo sát nhận quà - Hoàng Hải Mobile JP">
     <meta name="author" content="Sweetsica">
     <title>Khảo sát nhận quà - Hoàng Hải Mobile JP</title>
-    <!-- Favicons-->
-    <link rel="shortcut icon" href="http://demo.sweetsica.com/hoanghaisurvey/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-144x144-precomposed.png">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
     <!-- BASE CSS -->
@@ -31,16 +27,10 @@
 <header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-5">
+            <div class="col-12 custom-logo">
                 <a href="https://hoanghaimobile.jp"><img src="https://muahang.hoanghaimobile.jp/assets/logo.png" alt="" width="230" height="55"></a>
             </div>
-            <div class="col-7">
-                <div id="social">
-                    <ul>
-                        <li><a href="https://www.facebook.com/hoanghaimobile2018"><i class="social_facebook"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+
         </div>
         <!-- /row -->
     </div>
@@ -162,28 +152,28 @@
                                         <ul>
                                             <li>
                                                 <div class="checkbox_radio_container">
-                                                    <input type="checkbox" id="question_3_opt_1" name="question_3" class="required" value="Facebook" onchange="getVals(this, 'question_3');">
+                                                    <input type="checkbox" id="question_3_opt_1" name="question_3[]" class="required" value="Facebook" onchange="getVals(this, 'question_3');">
                                                     <label class="checkbox" for="question_3_opt_1"></label>
                                                     <label for="question_3_opt_1" class="wrapper">Facebook</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="checkbox_radio_container">
-                                                    <input type="checkbox" id="question_3_opt_2" name="question_3" class="required" value="Tiktok" onchange="getVals(this, 'question_3');">
+                                                    <input type="checkbox" id="question_3_opt_2" name="question_3[]" class="required" value="Tiktok" onchange="getVals(this, 'question_3');">
                                                     <label class="checkbox" for="question_3_opt_2"></label>
                                                     <label for="question_3_opt_2" class="wrapper">Tiktok</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="checkbox_radio_container">
-                                                    <input type="checkbox" id="question_3_opt_3" name="question_3" class="required" value="Website - Google" onchange="getVals(this, 'question_3');">
+                                                    <input type="checkbox" id="question_3_opt_3" name="question_3[]" class="required" value="Website - Google" onchange="getVals(this, 'question_3');">
                                                     <label class="checkbox" for="question_3_opt_3"></label>
                                                     <label for="question_3_opt_3" class="wrapper">Website - Google</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="checkbox_radio_container">
-                                                    <input type="checkbox" id="question_3_opt_4" name="question_3" class="required" value="Bạn bè giới thiệu" onchange="getVals(this, 'question_3');">
+                                                    <input type="checkbox" id="question_3_opt_4" name="question_3[]" class="required" value="Bạn bè giới thiệu" onchange="getVals(this, 'question_3');">
                                                     <label class="checkbox" for="question_3_opt_4"></label>
                                                     <label for="question_3_opt_4" class="wrapper">Bạn bè giới thiệu</label>
                                                 </div>

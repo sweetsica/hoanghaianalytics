@@ -6,12 +6,8 @@
     <meta name="description" content="Khảo sát nhận quà - Hoàng Hải Mobile JP">
     <meta name="author" content="Sweetsica">
     <title>Khảo sát nhận quà - Hoàng Hải Mobile JP</title>
-    <!-- Favicons-->
-    <link rel="shortcut icon" href="http://demo.sweetsica.com/hoanghaisurvey/img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="http://demo.sweetsica.com/hoanghaisurvey/img/apple-touch-icon-144x144-precomposed.png">
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css?family=Caveat|Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
     <!-- BASE CSS -->
@@ -32,7 +28,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-5">
-                <a href="https://hoanghaimobile.jp"><img src="https://muahang.hoanghaimobile.jp/assets/logo.png" alt="" width="50" height="55"></a>
+                <a href="https://hoanghaimobile.jp"><img src="https://muahang.hoanghaimobile.jp/assets/logo.png" alt="" width="230" height="55"></a>
             </div>
             <div class="col-7">
                 <div id="social">

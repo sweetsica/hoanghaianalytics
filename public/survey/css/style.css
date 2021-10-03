@@ -45,7 +45,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.4;
   font-family: "Poppins", sans-serif;
-  color: #444;
+  color: rgb(240, 240, 241);
 }
 body.style_1 {
   background: #ce61c9 url(../img/d65c68ab75c5bc9be5d4.jpg) no-repeat center left;
@@ -60,7 +60,7 @@ body.style_1 {
   }
 }
 body.style_2 {
-  background: #9933ff url(../img/d65c68ab75c5bc9be5d4.jpg) no-repeat center left;
+  background: #d7d7d7 url(../img/d65c68ab75c5bc9be5d4.jpg) no-repeat center left;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -416,10 +416,10 @@ footer ul li:last-child:after {
   content: "";
 }
 footer ul li a {
-  color: #fff;
+  color: #000000;
 }
 footer ul li a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .wrapper_centering {
@@ -570,7 +570,7 @@ button.backward,
 button.forward,
 button.submit {
   border: none;
-  color: #111;
+  color: #FFFFFF;
   text-decoration: none;
   transition: background .5s ease;
   -moz-transition: background .5s ease;
@@ -580,7 +580,7 @@ button.submit {
   cursor: pointer;
   outline: none;
   text-align: center;
-  background: #ffcc00;
+  background: rgb(255, 80, 102);
   position: relative;
   font-size: 14px;
   font-size: 0.875rem;
@@ -605,6 +605,7 @@ button[disabled] {
 .backward:hover,
 .forward:hover {
   background: #fff;
+  color: #454545;
 }
 
 #top-wizard {
@@ -1627,4 +1628,10 @@ body[dir=rtl] .fl-form.fl-style-2 label.fl-label {
 body[dir=rtl] .fl-form .fl-wrap-select:after {
   right: unset;
   left: 6px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .custom-logo{
+        text-align: center;
+    }
 }

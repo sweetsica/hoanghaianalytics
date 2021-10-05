@@ -28,7 +28,9 @@ class UserController extends Controller
                     Session::put('user_id', $user_info->id);
                     Auth::loginUsingId($user_info->id);
                     $link_datas = LinkManage::with('ShortLink')->latest()->get();
-                    return view('back-end/link/manage-link', compact('user_info','link_datas'));
+//                    return view('back-end/link/manage-link', compact('user_info','link_datas'));
+                    return redirect()->route('shortlink')->with( ['user_info' => $user_info,'link_datas'=>$link_datas] );
+
                 } else {
                     Session::flash('error', 'Đăng nhập thất bại MK!');
                     return view('back-end/login');

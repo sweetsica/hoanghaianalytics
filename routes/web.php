@@ -21,7 +21,7 @@ use App\Http\Controllers\VisitorController;
 Route::get('/','App\Http\Controllers\UserController@getLogin')->name('user.login.get');
 
 Route::get('/dashboard','App\Http\Controllers\VisitorController@dashboard')->name('dashboard')->middleware('auth');
-Route::get('/clear','App\Http\Controllers\VisitorController@userSessionClear')->name('clear.session');
+Route::get('/clear','App\Http\Controllers\UserController@userSessionClear')->name('clear.session');
 Route::get('/generate-shorten-link', [ShortLinkController::class,'index'])->name('shortlink')->middleware('auth');
 Route::post('/generate-shorten-link', [ShortLinkController::class,'store'])->name('generate-shorten-link.post')->middleware('auth');
 

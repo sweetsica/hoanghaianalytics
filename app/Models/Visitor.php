@@ -13,4 +13,9 @@ class Visitor extends Model
     {
         return $this->hasMany(ShortLink::class,'link','visitor_clicked');
     }
+
+//    public function setVisitorAttribute($value)
+//    {
+//
+//    }
 }

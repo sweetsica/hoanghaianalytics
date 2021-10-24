@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Visitor extends Model
 {
     use HasFactory;
+    protected $guarded = [''];
 
     public function visitor()
     {
@@ -61,18 +62,21 @@ class Visitor extends Model
     {
         switch ($value){
             case "http://muahang.hoanghaimobile.jp":
-                $this->attributes['visitor_clicked'] = 1;
+                $this->attributes['visitor_linkfrom'] = 1;
                 break;
             case "https://www.tiktok.com":
-                $this->attributes['visitor_clicked'] = 2;
+                $this->attributes['visitor_linkfrom'] = 2;
                 break;
             case "https://hoanghaimobile.jp/mua-hang-tai-day?utm-source=sieuthidienthoai&group=21&ads=8":
-                $this->attributes['visitor_clicked'] = 3;
+                $this->attributes['visitor_linkfrom'] = 3;
                 break;
             default:
-                return $value;
+                $this->attributes['visitor_linkfrom'] = $value;
         }
     }
+
+
+
 
     public function getVisitorLinkfromAttribute($value)
     {

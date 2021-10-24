@@ -28,6 +28,7 @@ trait VisitorTriat
         $time = Carbon::now();
         return $time;
     }
+
     public static function time_now2()
     {
         $time = Carbon::now();

@@ -19,19 +19,19 @@ class Visitor extends Model
     {
         switch ($value){
             case "iOS":
-                $this->attributes['visitor_clicked'] = 1;
+                $this->attributes['visitor_platform'] = 1;
                 break;
             case "AndroidOS":
-                $this->attributes['visitor_clicked'] = 2;
+                $this->attributes['visitor_platform'] = 2;
                 break;
             case "Linux":
-                $this->attributes['visitor_clicked'] = 3;
+                $this->attributes['visitor_platform'] = 3;
                 break;
             case "Windows":
-                $this->attributes['visitor_clicked'] = 4;
+                $this->attributes['visitor_platform'] = 4;
                 break;
             case "OS X":
-                $this->attributes['visitor_clicked'] = 5;
+                $this->attributes['visitor_platform'] = 5;
                 break;
             default:
                 return $value;

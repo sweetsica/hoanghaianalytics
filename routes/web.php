@@ -25,9 +25,9 @@ Route::get('/dashboard','App\Http\Controllers\VisitorController@dashboard')->nam
 Route::get('/generate-shorten-link', [ShortLinkController::class,'index'])->name('shortlink');
 Route::post('/generate-shorten-link', [ShortLinkController::class,'store'])->name('generate-shorten-link.post');
 
-//create account with email and username
-//Route::get('/register','App\Http\Controllers\UserController@getRegister');
-//Route::post('/register','App\Http\Controllers\UserController@postRegister')->name('user.create');
+// //create account with email and username
+// Route::get('/register','App\Http\Controllers\UserController@getRegister');
+// Route::post('/register','App\Http\Controllers\UserController@postRegister')->name('user.create');
 
 //login - check session username
 Route::get('/login','App\Http\Controllers\UserController@getLogin');
